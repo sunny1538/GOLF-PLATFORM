@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Golf Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h3>🏌️ Golf Platform</h3>
+            <div>
+                <span id="user-name">John Doe</span>
+                <button class="btn" onclick="goTo('scores')" style="margin-left:1rem;">+ Score</button>
+                <button class="btn" onclick="goTo('draws')">Draws</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="padding-top: 2rem;">
+        <h1>Your Dashboard</h1>
+        
+        <div class="grid">
+            <div class="card">
+                <h3>Latest Score</h3>
+                <p id="latest-score">42 points</p>
+                <button class="btn" onclick="goTo('scores')">Enter New Score</button>
+            </div>
+            
+            <div class="card">
+                <h3>Monthly Draw</h3>
+                <p>💰 Prize Pool: <strong>$5,250</strong></p>
+                <p>📅 Closes in: <strong>12 days</strong></p>
+                <p>🎯 Entries: <strong>3</strong></p>
+                <button class="btn" onclick="goTo('draws')">View Draw</button>
+            </div>
+            
+            <div class="card">
+                <h3>Charity Impact</h3>
+                <p>❤️ Supporting: <strong>Golfers Against Cancer</strong></p>
+                <p>💵 Donated: <strong>$24.50</strong> this year</p>
+                <button class="btn">Change Charity</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat"><h3 id="total-scores">3</h3><p>Total Scores</p></div>
+            <div class="stat"><h3 id="avg-score">41</h3><p>Avg Score</p></div>
+            <div class="stat"><h3>Active</h3><p>Subscription</p></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>updateDashboard();</script>
+</body>
+</html>
